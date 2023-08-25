@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="/styles/design.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <% if(locals.work){ %>
+                    <li><a href="today">Today's List</a></li>
+                <% }else if(locals.today){ %>
+                    <li><a href="work">Work List</a></li>
+                <% } %>
+                <li>Create New</li>
+            </ul>
+        </nav>
+    </header>

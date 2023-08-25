@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --textCol: rgb(205, 192, 92);
+    --bgCol: rgb(53, 53, 53);
+}
+
+html, body{
+    background-color: var(--bgCol);
+    color: var(--textCol);
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar{
+    background-color: var(--textCol);
+    padding: 15px 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.568);
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.navbar ul{
+    display: flex;
+    flex-direction: row;
+    color: var(--bgCol);
+    font-weight: bold;
+}
+
+.navbar ul li{
+    list-style: none;
+    margin: 0 20px;
+    padding: 5px;
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+.navbar a:visited{
+    text-decoration: none;
+    color: var(--bgCol);
+}
+
+.head{
+    display: block;
+    max-width: 300px;
+    margin: calc(29.2px + 50px) 40px;
+    margin-bottom: 20px;
+    padding: 10px 0px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: var(--textCol);
+    color: var(--bgCol);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.508);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+#list{
+    max-width: calc(100% - 120px);
+    position: relative;
+    left: 30px;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(243, 240, 207);
+    border-radius: 4px;
+    color: black;
+}
+
+.listItem{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin: 5px;
+    max-width: 100%;
+    word-wrap: break-word;
+    border-bottom: 2px solid rgba(211, 191, 142, 0.351);
+}
+
+.listItem p{
+    margin-left: 10px;
+    max-width: 98%;
+    word-wrap: break-word;
+    font-size: 110%;
+}
+
+.listItem input[type=checkbox] {
+    min-width: 17px;
+    min-height: 17px;
+    accent-color: var(--textCol);
+}
+
+#list form{
+    margin: 5px;
+    margin-left: 0px;
+    padding: 5px;
+}
+
+#list form button{
+    background-color: var(--textCol);
+    border: none;
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    transition: background-color 0.1s ease-in;
+}
+
+#list form button:hover{
+    cursor: pointer;
+    background-color: rgb(226, 217, 146);
+}
+
+#list form input[type=text]{
+    margin-left: 20px;
+    padding: 5px;
+    width: calc(100% - 100px);
+    border: none;
+    background-color: rgb(243, 240, 207);
+    text-align: center;
+    font-size: 120%;
+}
+
+#list form input[type=text]:focus{
+    outline: none;
+    border-bottom: 3px solid rgb(211, 191, 142);
+}
+
+input[type=checkbox]:checked+p.strike{
+    text-decoration: line-through;
+    color: var(--textCol);
+  }
+  
+
+footer{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 5px;
+    background-color: var(--bgCol);
+}

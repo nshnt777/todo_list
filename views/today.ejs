@@ -1,0 +1,31 @@
+<%-include("partials/header.ejs") %>
+
+<main>
+    <div class="head">
+        <h1>Today's List</h1>
+        <span>Date: <%= date %></span>
+    </div>
+
+    <div id="list">
+        <div class="listItem">
+            <input type="checkbox">
+            <p class="strike">Stuff1</p>
+        </div>
+        <% if(locals.newTask){ %>
+                <% for(let i = 0; i < newTask.length; i++){ %>
+                    <div class="listItem">
+                        <input type="checkbox">
+                        <p class="strike"><%= newTask[i] %></p>
+                    </div>
+                <% } %>
+        <% } %>
+
+        <form action="/today" method="POST">
+            <button type="submit">+</button>
+            <input type="text" placeholder="Enter new task" name="NewTask" autocomplete="off">
+        </form>
+    </div>
+
+</main>
+
+<%-include("partials/footer.ejs") %>

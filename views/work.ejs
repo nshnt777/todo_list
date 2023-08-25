@@ -1,0 +1,30 @@
+<%-include("partials/header.ejs") %>
+
+<main>
+    <div class="head">
+        <h1>Work List</h1>
+    </div>
+
+    <div id="list">
+        <div class="listItem">
+            <input type="checkbox">
+            <p class="strike">Stuff1</p>
+        </div>
+        <% if(locals.newTask){ %>
+                <% for(let i = 0; i < newTask.length; i++){ %>
+                    <div class="listItem">
+                        <input type="checkbox">
+                        <p class="strike"><%= newTask[i] %></p>
+                    </div>
+                <% } %>
+        <% } %>
+
+        <form action="/work" method="POST">
+            <button type="submit">+</button>
+            <input type="text" placeholder="Enter new task" name="NewTask" autocomplete="off">
+        </form>
+    </div>
+
+</main>
+
+<%-include("partials/footer.ejs") %>
