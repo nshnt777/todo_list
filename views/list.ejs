@@ -2,8 +2,7 @@
 
 <main>
     <div class="head">
-        <h1>Today's List</h1>
-        <span>Date: <%= date %></span>
+        <h1><%= listTitle %></h1>
     </div>
 
     <div id="list">
@@ -13,14 +12,14 @@
                     <div class="listItem">
                         <input type="checkbox" onchange="this.form.submit()" name="deleteTask" value="<%= item._id %>">
                         <p class="strike"><%= item.task %></p>
-                        <input type="hidden" name="listName" value="Today">
+                        <input type="hidden" name="listName" value="<%= listTitle %>">
                     </div>
                 </form>
                 <% }); %>
         <% } %>
 
         <form class="listItem" action="/today" method="POST">
-            <button type="submit" name="postListName" value="Today">+</button>
+            <button type="submit" name="postListName" value="<%= listTitle %>">+</button>
             <input type="text" placeholder="Enter new task" name="NewTask" autocomplete="off">
         </form>
     </div>

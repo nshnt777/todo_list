@@ -15,8 +15,8 @@
             <ul>
                 <% if(locals.work){ %>
                     <li><a href="today">Today's List</a></li>
-                <% }else if(locals.today){ %>
-                    <li><a href="work">Work List</a></li>
+                <% }if(locals.today){ %>
+                    <li><a href="Work">Work List</a></li>
                 <% } %>
                 <li>Create New</li>
             </ul>
